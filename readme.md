@@ -34,30 +34,33 @@ Extend the rules to fit your project needs
   "env": {
     "browser": true,
     "commonjs": true,
-    "es2021": true
+    "es2021": true,
+    "node": true
   },
-  "extends": [
-    "prettier",
-    "plugin:react/recommended",
-    "airbnb",
-    "plugin:node/recommended"
-  ],
+  "extends": ["prettier", "airbnb-base", "plugin:node/recommended"],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
     },
     "ecmaVersion": "latest"
   },
-  "plugins": ["react", "prettier", "node"],
+  "plugins": ["prettier"],
   "rules": {
     "quotes": ["error", "double", { "allowTemplateLiterals": true }],
     "linebreak-style": ["error", "windows"],
-    "no-unused-vars": ["error", { "argsIgnorePattern": "req|res|next" }],
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "req|res",
+        "varsIgnorePattern": "useEffect"
+      }
+    ],
     "no-console": "warn",
     "func-names": "off",
     "object-curly-newline": "off"
   }
 }
+
 
 ```
 
@@ -89,16 +92,19 @@ Extend the rules to fit your project needs
 
 ```
 {
+  "root": true,
   "env": {
     "browser": true,
     "commonjs": true,
-    "es2021": true
+    "es2021": true,
+    "node": true
   },
   "extends": [
     "prettier",
     "plugin:react/recommended",
     "airbnb",
-    "plugin:react/jsx-runtime"
+    "plugin:react/jsx-runtime",
+    "airbnb/hooks"
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -109,12 +115,19 @@ Extend the rules to fit your project needs
   "plugins": ["react", "prettier"],
   "rules": {
     "quotes": ["error", "double", { "allowTemplateLiterals": true }],
-    "linebreak-style": ["error", "windows"],
-    "no-unused-vars": ["error", { "argsIgnorePattern": "req|res|next" }],
+    "linebreak-style": ["off", "windows"],
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "req|res|next",
+        "varsIgnorePattern": "useEffect"
+      }
+    ],
     "no-console": "warn",
     "func-names": "off",
     "object-curly-newline": "off",
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
+    "comma-dangle": ["error", "never"]
   }
 }
 
