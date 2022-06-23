@@ -1,10 +1,10 @@
 const express = require("express");
 const userRouter = require("./backend/router/userRouter");
-// const lodash = require("lodash");
+const lodash = require("lodash");
 
 const app = express();
 
-// const x = 10;
+const x = 10;
 
 app.use("/api/v1/user", userRouter);
 

@@ -10,7 +10,8 @@
     "prettier",
     "plugin:react/recommended",
     "airbnb",
-    "plugin:react/jsx-runtime"
+    "plugin:react/jsx-runtime",
+    "airbnb/hooks"
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -32,6 +33,7 @@
     "no-console": "warn",
     "func-names": "off",
     "object-curly-newline": "off",
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
+    "comma-dangle": ["error", "never"]
   }
 }
