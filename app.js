@@ -1,6 +1,6 @@
 const express = require("express");
 const userRouter = require("./backend/router/userRouter");
-const lodash = require("lodash");
+// const lodash = require("lodash");
 
 const app = express();
 
