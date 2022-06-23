@@ -1,0 +1,36 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "prettier",
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:node/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest"
+  },
+  "plugins": ["react", "prettier", "node"],
+  "rules": {
+    "quotes": ["error", "double", { "allowTemplateLiterals": true }],
+    "linebreak-style": ["error", "windows"],
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "req|res|next",
+        "varsIgnorePattern": "useEffect"
+      }
+    ],
+    "no-console": "warn",
+    "func-names": "off",
+    "object-curly-newline": "off"
+  }
+}
