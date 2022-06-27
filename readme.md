@@ -100,11 +100,11 @@ Extend the rules to fit your project needs
     "node": true
   },
   "extends": [
-    "prettier",
     "plugin:react/recommended",
     "airbnb",
     "plugin:react/jsx-runtime",
-    "airbnb/hooks"
+    "airbnb/hooks",
+    "react-app"
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -112,7 +112,7 @@ Extend the rules to fit your project needs
     },
     "ecmaVersion": "latest"
   },
-  "plugins": ["react", "prettier"],
+  "plugins": ["react"],
   "rules": {
     "quotes": ["error", "double", { "allowTemplateLiterals": true }],
     "linebreak-style": ["off", "windows"],
@@ -127,7 +127,15 @@ Extend the rules to fit your project needs
     "func-names": "off",
     "object-curly-newline": "off",
     "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
-    "comma-dangle": ["error", "never"]
+    "comma-dangle": ["error", "never"],
+    "jsx-a11y/anchor-is-valid": "off",
+    "react/self-closing-comp": [
+      "error",
+      {
+        "component": true,
+        "html": false
+      }
+    ]
   }
 }
 
