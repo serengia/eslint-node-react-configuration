@@ -139,3 +139,5 @@ Extend the rules to fit your project needs
 - ESLint Rules - https://eslint.org/
 - Airbnb Style Guide - https://www.npmjs.com/package/eslint-config-airbnb/
 - Prettier - https://prettier.io/
+
+- Configure ESLint from Vs Code - https://code.visualstudio.com/docs/nodejs/reactjs-tutorial
